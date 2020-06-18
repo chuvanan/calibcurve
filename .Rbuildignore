@@ -7,7 +7,6 @@
 ^\.travis\.yml$
 ^codecov\.yml$
 ^docs$
-README.Rmd
 README.html
 ^_pkgdown\.yml$
 contributors.md
@@ -15,3 +14,4 @@ contributors.md
 ^man-roxygen$
 ^\.github$
 ^LICENSE\.md$
+^README\.Rmd$
