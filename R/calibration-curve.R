@@ -15,9 +15,10 @@
 #' predicted value is plotted against the true fraction of positive cases.
 #'
 #' There is a [ggplot2::autoplot()] method for quickly visualising the curve.
-#' his works for binary and multiclass output, and also works with grouped data
+#' This works for binary and multiclass output, and also works with grouped data
 #' (i.e. from resamples).
 #'
+#' @param data A `data.frame` containing the `truth` and `estimate` columns.
 #' @param truth The column identifier for the true class results (that is a
 #'     `factor`). This should be an unquoted column name although this argument
 #'     is passed by expression and supports quasiquotation (you can unquote
@@ -37,12 +38,14 @@
 #' @param na_rm A `logical` value indicating whether NA values should be
 #'     stripped before the computation proceeds.
 #' @param object The `clbr_df` data frame returned from `calibration_curve()`
+#' @param ... Not currently used
 #'
 #' @family curve metrics
 #' @template multiclass-curve
 #' @template event_first
-#' 
 #'
+#' @rdname clbr_curve
+#' 
 #' @return
 #' A tibble with `clbr_df` or `clbr_grouped_df` having columns `.frac_positive`
 #' and `.mean_predicted`
@@ -120,8 +123,8 @@ calibration_curve.data.frame = function(data,
     res
 }
 
-
-
+#' @export
+#' @rdname clbr_curve
 calibration_curve_vec = function(truth,
                                  estimate,
                                  n_bins = 10L,
@@ -253,8 +256,7 @@ autoplot.clbr_df = function(object, ...) {
         grps = dplyr::groups(object)
         grps_chr = paste0(dplyr::group_vars(object), collapse = "_")
         interact_expr = list(color = rlang::expr(interaction(!!!grps, sep = "_")))
-        clbr_chart = clbr_chart %+%
-            ggplot2::labs(color = grps_chr)
+        clbr_chart = clbr_chart %+% ggplot2::labs(color = grps_chr)
     } else {
         interact_expr = list()
     }
