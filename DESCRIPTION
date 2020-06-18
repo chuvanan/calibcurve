@@ -1,13 +1,15 @@
 Package: calibcurve
-Title: Functions for Plotting Calibration Curve
+Type: Package
+Title: Calibration of Predicted Probabilities
 Version: 0.1.0
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "An",
+           family = "Chu",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+           email = "chuvanan.cva@gmail.com")
+Description: Functions to compute and visualise predicted probabilities for a calibration curve.
+URL: https://github.com/chuvanan/calibcurve
+BugReports: https://github.com/chuvanan/calibcurve/issues
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
