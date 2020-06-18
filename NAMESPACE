@@ -2,6 +2,7 @@
 
 S3method(calibration_curve,data.frame)
 export(calibration_curve)
+export(calibration_curve_vec)
 import(ggplot2)
 import(yardstick)
 importFrom(dplyr,as_tibble)
