@@ -12,6 +12,14 @@ probabilities and visualise a calibration curve, aka reliability diagram
 ([Niculescu-Mizil & Caruana,
 2005](https://dl.acm.org/doi/10.1145/1102351.1102430)).
 
+  - `calibcurve` is powered by the
+    `[yardstick](https://yardstick.tidymodels.org/index.html)`’s
+    infrastructure and its implementation of related curve metrics.
+
+  - `calibcurve` borrowed some ideas from sklearn’s
+    [calibration](https://scikit-learn.org/stable/modules/generated/sklearn.calibration.calibration_curve.html#sklearn.calibration.calibration_curve)
+    module.
+
 ## Installation
 
 You can install the released version of calibcurve from
