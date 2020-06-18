@@ -26,7 +26,8 @@ You can install the released version of calibcurve from
 [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
-install.packages("calibcurve")
+# install.packages("calibcurve")
+# Not yet!
 ```
 
 And the development version from [GitHub](https://github.com/) with:
