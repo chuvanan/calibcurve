@@ -1,0 +1,17 @@
+^\.projectile$
+^revdep$
+^CRAN-RELEASE$
+^cran-comments\.md$
+^.*\.Rproj$
+^\.Rproj\.user$
+^\.travis\.yml$
+^codecov\.yml$
+^docs$
+README.Rmd
+README.html
+^_pkgdown\.yml$
+contributors.md
+^pkgdown$
+^man-roxygen$
+^\.github$
+^LICENSE\.md$
